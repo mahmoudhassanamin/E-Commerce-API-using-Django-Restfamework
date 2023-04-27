@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest-framework',
-    'rest-framework.authtoken',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'django_filters',
     'ECommerceAPI'
 ]
 
@@ -134,6 +135,7 @@ REST_FRAMEWORK={
         'rest-framework.authentication.SessionAuthentication',
         'rest-framework.authentication.BasicAuthentication',
         'rest-framework-simplejwt.authentication.JwtAuthentication'
-        ]
+        ],
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
     
 }
